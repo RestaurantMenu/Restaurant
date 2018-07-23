@@ -13,13 +13,76 @@
             }
             img.count{
                 margin-top: -7%;
-                margin-left: 35%;
+                margin-left: 35.5%;
                 width: 30%;
             }
+            #loader {
+              position: absolute;
+              left: 54%;
+              top: 80%;
+              margin: -75px 0 0 -75px;
+              border: 16px solid black;
+              border-radius: 50%;
+              border-top: 16px solid black;
+              height: 17%;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+            }
+
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            .animate-bottom {
+              position: relative;
+              -webkit-animation-name: animatebottom;
+              -webkit-animation-duration: 1s;
+              animation-name: animatebottom;
+              animation-duration: 1s
+            }
+
+            @-webkit-keyframes animatebottom {
+              from { bottom:-100px; opacity:0 } 
+              to { bottom:0px; opacity:1 }
+            }
+
+            @keyframes animatebottom { 
+              from{ bottom:-100px; opacity:0 } 
+              to{ bottom:0; opacity:1 }
+            }
         </style>
+        <script type="text/javascript">
+            function counting(){
+                var myVar;
+
+                function myFunction() {
+                    myVar = setTimeout(showPage, 0);
+                }
+
+                function showPage() {
+                  //document.getElementById("loader").style.display = "none";
+                  //document.getElementById("myDiv").style.display = "block";
+                    //window.location.href("Home.html");
+                    //window.open("Home.html");
+                    //document.body.innerHTML += '<a href="https://www.google.com/" style="display: none;" id="link">Link</a>';
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body onload="counting()" style="margin:0;">
         <img class="title" src="Images/Designing_Process/Name.png">
         <img class="count" src="Images/Designing_Process/Loading_Logo.png">
+        
+        <div id="loader"></div>
+
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+          <h2>Tada!</h2>
+          <p>Some text in my newly loaded page..</p>
+        </div>
     </body>
 </html>
