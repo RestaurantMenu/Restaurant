@@ -2,65 +2,32 @@
 <html>
     <head>
         <title>Index Page</title>
+        <link rel="stylesheet" type="text/css" href="food_court.css" />
         <style type="text/css">
-            body{
-                background-image:url(Images/Designing_Process/Background.jpg);
-                background-repeat: no-repeat;
-            }
-            div.title{
-                margin-top: -7%;
-            }
-            img.title{
-                width: 75%;
-                height: 60%;
-            }
-            div.logo{
+            iframe{
                 position: relative;
-                margin-left: -15%;
-                margin-top: -18%;
-                z-index: -1;
-            }
-            img.logo{
-                width: 40%;
-                height: 75%;
-            }
-            div.bar{
-                position: relative;
-                background-color: #f7b240;
-                width: 88%;
-                height: 10%;
-                border: 2px solid black;
-                margin-top: -18%;
-                margin-left: 10%;
+                height: 600px;
+                margin-top: 5%;
+                margin-left: 1%;
+                width: 97%;
                 z-index: -2;
             }
-            ul
-            {
-                list-style-type:none;
-                margin-left: 80%;
-                margin-top: -4.5%;
-            }
-            a{
+            input[type="submit"],input[type="reset"]{
+                background-color: #f7b240;
                 font-family: cursive;
-                background-color:#f7b240;
-                float: left;
-                font-weight:bold;
-                color:black;
-                width:40%;
-                text-align:center;
-                padding:4px;
-                border-top: 2px solid black;
-                border-left: 2px solid black;
-                border-right: 2px solid black;
-                margin-right: 1%;
+                text-align: center;
+                font-size: 120%;     
+                font-weight: bold;
+                border: 2px solid black;
+                padding: 0.5%;
             }
-            a:link,a:visited
-            {               
-                text-decoration:none;
+            div.buttons{
+                margin-top: 5%;
+                text-align: center;
             }
-            a:hover,a:active
-            {
-                background-color:chocolate;
+            marquee{
+                color: white;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -74,9 +41,17 @@
         <div class="bar">bar</div>
         <div class="list">
             <ul>
-                <li><a href="Order.html">ORDER</a></li>
-                <li><a href="Table.html">TABLE</a></li>
+                <li><a class="navigation" href="Order.html" target="showFrame">ORDER</a></li>
+                <li><a class="navigation" href="Table.html" target="showFrame">TABLE</a></li>
             </ul>
+        </div>
+        <iframe src="Order.html" name="showFrame"></iframe>
+        <div class="buttons">
+            <form action="Payment.html">
+                <input type="submit" value="SUBMIT">
+                <input type="reset" value="CANCEL">
+            </form><br>
+            <marquee dir="ltr">COPYRIGHT &copy; 2018. ALL RIGHTS RESERVED</marquee>
         </div>
     </body>
 </html>
