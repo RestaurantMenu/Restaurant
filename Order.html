@@ -6,14 +6,27 @@
             body{
                 backface-visibility: hidden;
             }
-            img{
-                margin-top: 1%;
-                margin-left: 1%;
+            img.wood{
+                position: absolute;
+                margin-top: 0%;
+                margin-left: 0%;
+                margin-bottom: 0%;
                 width: 99%;
+                z-index:-1;
+            }
+            iframe{
+                position: absolute;
+                height: 720px;
+                margin-top: 6%;
+                margin-left: 8%;
+                width: 45%;
+                height: 70%;
+                z-index: 0;
             }
         </style>    
     </head>
     <body>
-        <img src="Images/Designing_Process/WoodWallFrame.png">
+        <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
+        <iframe src="" name="showFrame" frameborder="0"></iframe>
     </body>
 </html>
