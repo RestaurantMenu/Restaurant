@@ -13,9 +13,6 @@
                 width: 98%;
                 z-index: -2;
             }
-            div.form{
-                
-            }
             div.infoNeed{
                 margin-top: -42%;
                 margin-left: 17%;
@@ -23,6 +20,30 @@
                 font-size: 170%;
                 color: #f7b240;
                 text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+            }
+            div.boxes{
+                margin-left: 47%;
+                margin-top: -35.5%;
+            }
+            input{
+                margin-bottom: 6%;
+                display: block;
+                height: 6%;
+                font-size: 150%;
+                font-family: cursive;
+                color: chocolate;
+                text-transform: uppercase;
+            }
+            h3{
+                font-family: cursive;
+                font-size: 170%;
+                color: #f7b240;
+                text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+            }
+            div.home{
+                width: 15%;
+                margin-top: -22%;
+                margin-left: -1%;
             }
         </style>
     </head>
@@ -36,6 +57,20 @@
                 <h2>PAYMENT</h2>
                 <h2>CREDIT / DEBIT #</h2>
                 <h2>PIN #</h2>
+            </div>
+            <div class="boxes">
+                <form post="">
+                    <input style="width: 75%" type="text" name="fullName">
+                    <input style="width: 25%" type="text" name="phoneNumber">
+                    <input style="width: 50%; text-transform:none;" type="text" name="mail">
+                    <input style="width: 6%; display:none;" type="radio" value="payment" name="full"><h3>FULL</h3>
+                    <input style="width: 6%" type="radio" value="payment" name="advance"><h3>ADVANCE</h3>
+                    <input style="width: 75%" type="text" name="card">
+                    <input style="width: 15%" type="text" name="pin">
+                </form>
+            </div>
+            <div class="home">
+                <a href="Home.html" target="_blank"><img src="Images/Designing_Process/Home.png"></a>
             </div>
         </div>
     </body>
