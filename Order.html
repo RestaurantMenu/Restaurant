@@ -23,10 +23,38 @@
                 height: 70%;
                 z-index: 0;
             }
+            h2{
+                position: absolute;
+                margin-top: 6%;
+                margin-left: 60%;
+                font-family: cursive;
+                color: #f7b240;
+                text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
+            }
+            input.date{
+                float: left;
+                position: absolute;
+                margin-top: 6.5%;
+                margin-left: 88%;
+                background-color: #f7b240;
+                border: 1px solid black;
+                z-index: 1;
+            }
+            img.frame{
+                position: absolute;
+                margin-top: 10%;
+                margin-left: 55%;
+                width: 40%;
+                height: 70%;
+            }
         </style>    
     </head>
     <body>
         <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
-        <iframe src="" name="showFrame" frameborder="0"></iframe>
+        <iframe src="" name="showFrame" frameborder="1"></iframe>
+        <h2>SELECT A DATE HERE</h2>
+        <input class="date" style="margin-left: 80%;" type="time">
+        <input class="date" type="date">
+        <img class="frame" src="Images/Designing_Process/frame.png">
     </body>
 </html>
