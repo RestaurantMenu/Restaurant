@@ -6,44 +6,48 @@
             body{
                 backface-visibility: hidden;
             }
-            img{
-                position: relative;
-                margin-top: 1%;
-                margin-left: 1%;
+            img.wood{
+                position: absolute;
+                margin-top: 30%;
+                margin-left: 0%;
                 width: 99%;
-                z-index: -1;
+                z-index:-1;
             }
             div.head{
-                position: relative;
-                margin-top: -44%;
-                margin-left: 20%;
-                margin-bottom: 2%;
+                position: absolute;
+                z-index: 1;
+                margin-top: 35%;
+                margin-left: 25%;
+                width: 70%;
             }
             h2{
-                float: left;
-                margin-right: 20%;
+                position: absolute;
                 font-family: cursive;
                 color: #f7b240;
                 text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
             }
             input{
-                position: relative;
-                margin-top: 2.2%;
+                position: absolute;
+                margin-top: 2.5%;
+                margin-left: 90%;
                 background-color: #f7b240;
                 border: 1px solid black;
                 z-index: 1;
             }
             div.tableNumbers{
+                position: absolute;
+                margin-top: 40%;
                 margin-left: 5%;
             }
             img.table{
+                position: absolute;
                 float: left;
                 width: 25%;
                 margin-right: -13%;
             }
             div.tableRow1{
                 position: absolute;
-                margin-top: -6%;
+                margin-top: 0%;
             }
             div.tableRow2{
                 position: absolute;
@@ -64,7 +68,7 @@
                 margin-top: 7.5%;
             }
             div.frame{
-                position: relative;
+                position: absolute;
                 margin-left: 65%;
                 z-index: -1;
             }
@@ -81,11 +85,11 @@
         </style>    
     </head>
     <body>
-        <img src="Images/Designing_Process/WoodWallFrame.png">
+        <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
         <div class="head">
             <h2>SELECT A TABLE NUMBER</h2>
-            <h2 style="margin-right: 1%;">PLEASE SELECT A DATE HERE</h2>
-            <input type="time">
+            <h2 style="margin-left: 40%">PLEASE SELECT A DATE HERE</h2>
+            <input style="margin-left: 80%;" type="time">
             <input type="date">
         </div>
         <div class="tableNumbers">
