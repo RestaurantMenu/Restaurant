@@ -29,9 +29,10 @@
                 text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
             }
             input.date{
+                float: left;
                 position: absolute;
-                margin-top: 2.5%;
-                margin-left: 90%;
+                margin-top: 2.8%;
+                margin-left: 95%;
                 background-color: #f7b240;
                 border: 1px solid black;
                 z-index: 1;
@@ -89,6 +90,7 @@
             input.change{
                 position: absolute;
                 background-color: #f7b240;
+                font-size: 200%;
                 border: 2px solid black;
                 height: 20%;
                 width: 10%;
@@ -96,14 +98,28 @@
                 margin-top: 12%;
                 z-index: 1;
             }
+            h1.chairs{
+                position: absolute;
+                font-family: cursive;
+                margin-top: -32.5%;
+                margin-left: 38.5%;
+                font-size: 400%;
+            }
+            h1.tableNum{
+                position: absolute;
+                font-family: cursive;
+                margin-top: -48.5%;
+                margin-left: 36.5%;
+                font-size: 500%;
+            }
         </style>    
     </head>
     <body>
         <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
         <div class="head">
             <h2>SELECT A TABLE NUMBER</h2>
-            <h2 style="margin-left: 40%">PLEASE SELECT A DATE HERE</h2>
-            <input class="date" style="margin-left: 80%;" type="time">
+            <h2 style="margin-left: 47%">PLEASE SELECT A DATE HERE</h2>
+            <input class="date" style="margin-left: 85%;" type="time">
             <input class="date" type="date">
         </div>
         <div class="tableSet">
@@ -136,16 +152,19 @@
         <div class="selected">
             <h2 style="margin-left: 25%; margin-top: 2%">DESK NUMBER</h2>
             <img style="width: 70%; margin-left: 6%; margin-top: -5%" src="Images/Designing_Process/Table_Number.png">
+            <h1 class="tableNum">0</h1>
         </div>
         <div class="chairs">
             <h2 style="margin-left: 18%; margin-top: 2%">NUMBER OF CHAIRS</h2>
-            <div style="position: absolute">
+            <div style="position: absolute;">
                 <form style="position: static">
                     <input style="margin-left: 10%" class="change" type="button" name="plus" value="+">
                     <input style="margin-left: 65%" class="change" type="button" name="minus" value="-">
                 </form>  
-                <img style="width: 45%; margin-left: 20%; margin-top: -5%" src="Images/Designing_Process/Number_Of_Chairs.png">         
+                <img style="width: 45%; margin-left: 20%; margin-top: -5%" src="Images/Designing_Process/Number_Of_Chairs.png">
+                <h1 class="chairs">0</h1>
             </div>
         </div>
+        <a href="Home.html" target="_blank"><img style="width: 10%; margin-top: 35%" src="Images/Designing_Process/Home.png"></a>
     </body>
 </html>
