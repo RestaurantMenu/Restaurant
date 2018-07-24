@@ -2,20 +2,18 @@
 <html>
     <head>
         <title>Payment</title>
+        <link rel="stylesheet" type="text/css" href="food_court.css" />
         <style type="text/css">
-            body{
-                background-image:url(Images/Designing_Process/Background.jpg);
-                background-repeat: no-repeat;
-            }
-            img{
-                position: relative;
-                margin-top: 15%;
+            img.wood{
+                position: absolute;
+                margin-top: -15%;
                 margin-left: 1%;
                 width: 98%;
                 z-index: -2;
             }
             div.infoNeed{
-                margin-top: -42%;
+                position: absolute;
+                margin-top: -10%;
                 margin-left: 17%;
                 font-family: cursive;
                 font-size: 170%;
@@ -23,11 +21,14 @@
                 text-shadow: -1px 0 black, 0 5px black, 1px 0 black, 0 -1px black;
             }
             div.boxes{
+                position: absolute;
                 margin-left: 47%;
-                margin-top: -35.5%;
+                margin-top: -9.5%;
             }
             input{
-                margin-bottom: 6%;
+                position: relative;
+                margin-top: 10%;
+                margin-bottom: 15%;
                 display: block;
                 height: 6%;
                 font-size: 150%;
@@ -36,6 +37,8 @@
                 text-transform: uppercase;
             }
             h3{
+                position: absolute;
+                margin-top: -5%;
                 font-family: cursive;
                 font-size: 170%;
                 color: #f7b240;
@@ -49,29 +52,32 @@
         </style>
     </head>
     <body>
-        <img src="Images/Designing_Process/WoodWallFrame.png">
+        <div class="title">
+            <img class="title" src="Images/Designing_Process/Name.png">
+        </div>
+        <div class="logo">
+            <img class="logo" src="Images/Designing_Process/Logo.png">
+        </div>
+        <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
         <div class="form">
             <div class="infoNeed">
                 <h2>FULL NAME</h2>
                 <h2>PHONE NUMBER</h2>
                 <h2>E-MAIL</h2>
-                <h2>PAYMENT</h2>
                 <h2>CREDIT / DEBIT #</h2>
                 <h2>PIN #</h2>
+                <h2>PAYMENT</h2>
             </div>
             <div class="boxes">
                 <form post="">
-                    <input style="width: 75%" type="text" name="fullName">
-                    <input style="width: 25%" type="text" name="phoneNumber">
-                    <input style="width: 50%; text-transform:none;" type="text" name="mail">
-                    <input style="width: 6%; display:none;" type="radio" value="payment" name="full"><h3>FULL</h3>
-                    <input style="width: 6%" type="radio" value="payment" name="advance"><h3>ADVANCE</h3>
-                    <input style="width: 75%" type="text" name="card">
-                    <input style="width: 15%" type="text" name="pin">
+                    <input style="width: 200%" type="text" name="fullName">
+                    <input style="width: 60%" type="text" name="phoneNumber">
+                    <input style="width: 150%; text-transform:none;" type="text" name="mail">
+                    <input style="width: 200%" type="text" name="card">
+                    <input style="width: 20%" type="text" name="pin">
                 </form>
-            </div>
-            <div class="home">
-                <a href="Home.html" target="_blank"><img src="Images/Designing_Process/Home.png"></a>
+                <h3 style="margin-left: 25%">FULL</h3>
+                <h3 style="margin-left: 80%">ADVANCE</h3>
             </div>
         </div>
     </body>
