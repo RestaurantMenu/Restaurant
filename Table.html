@@ -139,6 +139,11 @@
                 }
             }
             
+            var desk = 0;
+            
+            function changeDesk(){
+                document.getElementById("tableNo").innerHTML = "1";
+            }
         </script>
     </head>
     <body>
@@ -179,7 +184,7 @@
         <div class="selected">
             <h2 style="margin-left: 25%; margin-top: 2%">DESK NUMBER</h2>
             <img style="width: 70%; margin-left: 6%; margin-top: -5%" src="Images/Designing_Process/Table_Number.png">
-            <h1 class="tableNum">0</h1>
+            <h1 class="tableNum" id="tableNo">0</h1>
         </div>
         <div class="chairs">
             <h2 style="margin-left: 18%; margin-top: 2%">NUMBER OF CHAIRS</h2>
