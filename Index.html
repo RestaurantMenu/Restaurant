@@ -10,7 +10,7 @@
                 margin-top: 1.5%;
                 margin-left: 1%;
                 width: 97%;
-                z-index: -2;
+                z-index: 1;
             }
             input[type="submit"],input[type="reset"]{
                 background-color: #f7b240;
@@ -31,7 +31,22 @@
                 color: white;
                 font-weight: bold;
             }
+            input:hover{
+                background-color: chocolate;
+                font-size: 130%;
+            }
         </style>
+        <script type="text/javascript">
+            function confirmation(){
+                var decision = confirm("Do you wants to make payment without reconsider the food orders / Table booking?");
+                if(decision){
+                    //window.location.replace('http://stackoverflow.com');
+                    //location.href='Payment.html';
+                    //$(location).attr('href', 'http://stackoverflow.com');
+                   // window.location.assign('https://www.w3schools.com')
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="title">
@@ -43,15 +58,15 @@
         <div class="bar">bar</div>
         <div class="list">
             <ul>
-                <li><a class="navigation" href="Order.html" target="showFrame">ORDER</a></li>
-                <li><a class="navigation" href="Table.html" target="showFrame">TABLE</a></li>
+                <li><a class="navi" href="Order.html" target="showFrame">ORDER</a></li>
+                <li><a class="navi" href="Table.html" target="showFrame">TABLE</a></li>
             </ul>
         </div>
-        <iframe src="Order.html" name="showFrame" frameborder="0"></iframe>
+        <iframe src="Order.html" name="showFrame" frameborder="0" scrolling="no"></iframe>
         <div class="buttons">
-            <form action="Payment.html">
-                <input type="submit" value="SUBMIT">
-                <input type="reset" value="CANCEL">
+            <form post="">
+                <input type="submit" value="SUBMIT" onclick="confirmation()">
+                <input type="reset" value="RESET">
             </form><br>
             <marquee dir="ltr">COPYRIGHT &copy; 2018. ALL RIGHTS RESERVED</marquee>
         </div>
