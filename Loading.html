@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
         <title>Loading page</title>
@@ -57,20 +58,8 @@
             }
         </style>
         <script type="text/javascript">
-            function counting(){
-                var myVar;
-
-                function myFunction() {
-                    myVar = setTimeout(showPage, 0);
-                }
-
-                function showPage() {
-                  //document.getElementById("loader").style.display = "none";
-                  //document.getElementById("myDiv").style.display = "block";
-                    //window.location.href("Home.html");
-                    //window.open("Home.html");
-                    //document.body.innerHTML += '<a href="https://www.google.com/" style="display: none;" id="link">Link</a>';
-                }
+            function counting(){  
+                setTimeout(function(){window.location.href='Home.html'},5000);  //change page after 5 seconds
             }
         </script>
     </head>
