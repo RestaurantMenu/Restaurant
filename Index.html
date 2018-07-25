@@ -38,12 +38,10 @@
         </style>
         <script type="text/javascript">
             function confirmation(){
-                var decision = confirm("Do you wants to make payment without reconsider the food orders / Table booking?");
+                var decision = confirm("Do you wants to make payment without reconsidering the food orders / Table booking?");
                 if(decision){
-                    //window.location.replace('http://stackoverflow.com');
-                    //location.href='Payment.html';
-                    //$(location).attr('href', 'http://stackoverflow.com');
-                   // window.location.assign('https://www.w3schools.com')
+                    form = document.getElementById("form");
+                    form.action = "Payment.html";
                 }
             }
         </script>
@@ -64,7 +62,7 @@
         </div>
         <iframe src="Order.html" name="showFrame" frameborder="0" scrolling="no"></iframe>
         <div class="buttons">
-            <form post="">
+            <form post="" action="" id="form">
                 <input type="submit" value="SUBMIT" onclick="confirmation()">
                 <input type="reset" value="RESET">
             </form><br>
