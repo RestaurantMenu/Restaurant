@@ -141,8 +141,8 @@
             
             var desk = 0;
             
-            function changeDesk(){
-                document.getElementById("tableNo").innerHTML = "1";
+            function changeDesk(clicked_id){
+                document.getElementById("tableNo").innerHTML = "" + clicked_id;
             }
         </script>
     </head>
@@ -159,25 +159,25 @@
                 <h1>1</h1>
                 <h1 style="margin-left: 30.5%">2</h1>
                 <h1 style="margin-left: 48.5%">3</h1>
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="1" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="2" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="3" onclick="changeDesk(this.id)">
             </div>
             <div class="row2">
                 <h1>4</h1>
                 <h1 style="margin-left: 30.5%">5</h1>
                 <h1 style="margin-left: 48.5%">6</h1>
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="4" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="5" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="6" onclick="changeDesk(this.id)">
             </div>
             <div class="row3">
                 <h1>7</h1>
                 <h1 style="margin-left: 30.5%">8</h1>
                 <h1 style="margin-left: 48.5%">9</h1>
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
-                <img class="table" src="Images/Designing_Process/Table_Number.png">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="7" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="8" onclick="changeDesk(this.id)">
+                <img class="table" src="Images/Designing_Process/Table_Number.png" id="9" onclick="changeDesk(this.id)">
             </div>
         </div>
         <img class="frame" src="Images/Designing_Process/frame.png">
