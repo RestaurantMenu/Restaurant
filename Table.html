@@ -112,7 +112,34 @@
                 margin-left: 36.5%;
                 font-size: 500%;
             }
-        </style>    
+            img.table:hover{
+                opacity:0.4;
+                filter:alpha(opacity=40);
+            }
+        </style>
+        <script type="text/javascript">
+            
+            var chairs = 1;
+            
+            function increase(){ 
+                if(chairs<=8){
+                    chairs = chairs + 1;
+                    document.getElementById("NoOfChairs").innerHTML = "" + chairs;
+                }else if(chairs>=8){
+                    alert("Maximum 9 chairs per desk");
+                }
+            }
+            
+            function decrease(){
+                if(chairs<=1){
+                    alert("Minimum 1 chairs per desk");
+                }else if(chairs>1){
+                    chairs = chairs - 1;
+                    document.getElementById("NoOfChairs").innerHTML = "" + chairs;
+                }
+            }
+            
+        </script>
     </head>
     <body>
         <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
@@ -158,11 +185,11 @@
             <h2 style="margin-left: 18%; margin-top: 2%">NUMBER OF CHAIRS</h2>
             <div style="position: absolute;">
                 <form style="position: static">
-                    <input style="margin-left: 10%" class="change" type="button" name="plus" value="+">
-                    <input style="margin-left: 65%" class="change" type="button" name="minus" value="-">
+                    <input style="margin-left: 10%" class="change" type="button" id="plus" value="+" onclick="increase()">
+                    <input style="margin-left: 65%" class="change" type="button" id="minus" value="-" onclick="decrease()">
                 </form>  
                 <img style="width: 45%; margin-left: 20%; margin-top: -5%" src="Images/Designing_Process/Number_Of_Chairs.png">
-                <h1 class="chairs">0</h1>
+                <h1 class="chairs" id="NoOfChairs">1</h1>
             </div>
         </div>
         <a href="Home.html" target="_blank"><img style="width: 10%; margin-top: 35%" src="Images/Designing_Process/Home.png"></a>
