@@ -4,23 +4,42 @@
     $userName="root";
     $password="";
     $db="restaurant";
-    $querry="insert into client(ID,FullName,PHONE,MAIL,CARD,PIN) values('fullName','phoneNumber','mail','card','pin')";
-
+    
     $connection = new mysqli($host,$userName,$password,$db);
 
-    if($connecton){
-        echo "Successfully Connected";
-    }else{
-        echo "Error";
+    if($connection->connect_error){
+        die("Connection failed: " . $connection->connect_error);
     }
-    /*if($connection->connect_error){
-        echo $connection->connect_error;
-    }else{
         
-        if($connection->query($querry)){
-            echo "inserted ";
-        }else{
-            echo "Error ";
-        }
-    }*/
+    //create database
+    $sql = "CREATE DATABASE Restaurant";
+    if($connection->query($sql) === TRUE){
+        echo "Database created successfully";
+    } else {
+        echo "Error creating database: " . $connection->error;
+    }
+    
+    //create table
+    $sqlTable = "CREATE TABLE client (id INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+                                        fullname VARCHAR(30) NOT NULL,
+                                        phone VARCHAR(30) NOT NULL,
+                                        email VARCHAR(50) NOT NULL,
+                                        card VARCHAR(30) NOT NULL,
+                                        pin VARCHAR(5) NOT NULL,
+                                        )";
+
+    if ($connection->query($sqlTable) === TRUE) {
+        echo "Table client created successfully";
+    } else {
+        echo "Error creating table: " . $connection->error;
+    }
+      
+    //insert data    
+    $sqlInsert = "INSERT INTO client (fullname, phone, email, card, pin) VALUES ('fullName','phoneNumber','mail','card','pin')";
+
+    if ($connection->query($sqlInsert) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $connection->error;
+    }
 ?>
