@@ -44,12 +44,16 @@
                 font-weight: bold;
                 background-color: #f7b240;
                 border: 1px solid black;
-                margin-left: 30%;
+                margin-left: -15%;
             }
             marquee{
                 margin-top: 8%;
                 color: white;
                 font-weight: bold;
+            }
+            .submit:hover{
+                background-color: chocolate;
+                font-size: 120%;
             }
         </style>
         <script type="text/javascript">
@@ -147,12 +151,13 @@
                     <input class="form" style="width: 150%; text-transform:none;" type="text" id="mail" required>
                     <input class="form" style="width: 200%" type="text" id="card" required>
                     <input class="form" style="width: 20%" type="text" id="pin" required>
+                    
+                    <input class="submit" type="submit" value="SUBMIT" onclick="validateForm()">
+                    <input style="margin-left: 35%;" class="submit" type="reset" value="RESET">
                 </form>
             </div>
         </div>
-        <img style="width: 10%; margin-top: 20%" src="Images/Designing_Process/Home.png">
-        <input class="submit" type="submit" value="SUBMIT" onclick="validateForm()">
-        <input style="margin-left: 45%;" class="submit" type="reset" value="RESET">
+        <a href="Home.html"><img style="width: 10%; margin-top: 20%" src="Images/Designing_Process/Home.png"></a>
         <marquee dir="ltr">COPYRIGHT &copy; 2018. ALL RIGHTS RESERVED</marquee>
     </body>
 </html>
