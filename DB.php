@@ -40,6 +40,6 @@
     if ($connection->query($sqlInsert) === TRUE) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $connection->error;
+        echo "Error inserting values: " . $connection->error;
     }
 ?>
