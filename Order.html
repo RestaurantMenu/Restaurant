@@ -93,8 +93,13 @@
                 margin-left: 30%;
             }
         </style>
+        <script type="text/javascript">
+            function bill(id){
+               document.getElementById("amount").innerHTML = "" + document.getElementById(id);
+            }    
+        </script>
     </head>
-    <body>
+    <body onload="bill()">
         <img class="wood" src="Images/Designing_Process/WoodWallFrame.png">
         <iframe src="ImageSet1.html" name="showFrameO" id="Foodlist" frameborder="0"></iframe>
         <h2>SELECT A DATE HERE</h2>
@@ -104,16 +109,16 @@
         <a href="Home.html" target="_blank"><img style="width: 10%; margin-top: 35%" src="Images/Designing_Process/Home.png"></a>
         <div>
             <ul>
-                <li><a class="navi" href="ImageSet1.html" target="showFrameO">BREAKFAST</a></li>
-                <li><a class="navi" href="ImageSet4.html" target="showFrameO">LUNCH</a></li>
-                <li><a class="navi" href="ImageSet3.html" target="showFrameO">DINNER</a></li>
-                <li><a class="navi" href="ImageSet5.html" target="showFrameO">TEA</a></li>
-                <li><a class="navi" href="ImageSet2.html" target="showFrameO">DESSERT</a></li>
+                <li><a class="navi" href="ImageSet1.html" target="showFrameO" id="s1" onclick="bill(this.id)">BREAKFAST</a></li>
+                <li><a class="navi" href="ImageSet4.html" target="showFrameO" id="s4" onclick="bill(this.id)">LUNCH</a></li>
+                <li><a class="navi" href="ImageSet3.html" target="showFrameO" id="s3" onclick="bill(this.id)">DINNER</a></li>
+                <li><a class="navi" href="ImageSet5.html" target="showFrameO" id="s5" onclick="bill(this.id)">TEA</a></li>
+                <li><a class="navi" href="ImageSet2.html" target="showFrameO" id="s2" onclick="bill(this.id)">DESSERT</a></li>
             </ul>
         </div>
         <div class="list">
         <p class="para">RS</p>
-        <p style="margin-top: -25%; margin-left: 25%" class="para" id="amount">000</p>
+        <p style="margin-top: -25%; margin-left: 25%;font-size: 50%;" class="para" id="amount">000</p>
         </div>
     </body>
 </html>
