@@ -18,7 +18,11 @@
         </style>
         <script type="text/javascript">
             function foods(name){
-                document.getElementById(name).style.filter = "blur(5px)";
+                if(document.getElementById(name).style.filter == "blur(5px)"){
+                    document.getElementById(name).style.filter = "blur(0px)";
+                }else{
+                    document.getElementById(name).style.filter = "blur(5px)";
+                }      
             }
         </script>
     </head>
