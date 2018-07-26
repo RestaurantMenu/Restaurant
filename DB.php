@@ -3,7 +3,7 @@
     $host="localhost";
     $userName="root";
     $password="";
-    $db="restaurant";
+    $db="RestaurantMenu";
     
     $connection = new mysqli($host,$userName,$password,$db);
 
@@ -12,7 +12,7 @@
     }
         
     //create database
-    $sql = "CREATE DATABASE Restaurant";
+    $sql = "CREATE DATABASE RestaurantMenu";
     if($connection->query($sql) === TRUE){
         echo "Database created successfully";
     } else {
@@ -32,14 +32,5 @@
         echo "Table client created successfully";
     } else {
         echo "Error creating table: " . $connection->error;
-    }
-      
-    //insert data    
-    $sqlInsert = "INSERT INTO client (fullname, phone, email, card, pin) VALUES ('fullName','phoneNumber','mail','card','pin')";
-
-    if ($connection->query($sqlInsert) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error inserting values: " . $connection->error;
     }
 ?>
